@@ -1,0 +1,244 @@
+/* Sets color variables */
+:root {
+    --slate: #023E8A;
+    --lightblue: #ADE8F4;
+    --darkblue: #03045E;
+    --dark: #000;
+    --bright: #fff;
+    --grey: #808080;
+    --offwhite: #F8F0E3;
+}
+
+h1, h2, h3, .ham-links, .tag-line {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p, li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5rem;
+    
+}
+
+/* Grid */
+body {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr 1fr 1fr auto;
+    grid-template-areas:
+        'header'
+        'main'
+        'projects'
+        'skills'
+        'footer';
+
+    gap: 1vw 1vh;
+    height: 100vh;
+    /* width: 90%; */
+    margin: 0 auto;
+    background-color: var(--offwhite);
+}
+
+.borders {
+    border: 2px solid;
+    border-color: var(--slate);
+}
+
+/* Header */
+header {
+    grid-area: header;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, var(--lightblue), var(--slate));
+    padding-top: 2vh;
+}
+
+header h1 {
+    color: var(--darkblue);
+    margin-right: 1vw;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--lightblue)
+}
+
+
+
+/* About me */
+main {
+    grid-area: main;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 1vh auto;
+}
+
+main h2 {
+    color: var(--darkblue);
+    margin-left: 1vw;
+}
+ 
+.bio {
+    align-self: start;
+}
+
+main img {
+    border-radius: 100%;
+    float: left;
+    padding: 1vh 1vw;
+}
+
+.bio p {
+    margin-bottom: 1vh;
+    padding: 0 1vw;
+    font-size: 1.1rem;
+}
+
+/* Sections and Cards */
+.projects {
+    grid-area: projects;
+    margin: 0 auto;
+}
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    color: var(--darkblue);
+}
+
+.cards {
+    margin: 3vh 1vw;
+    word-wrap: break-word;
+    width: 25%;
+    /* padding: 1vh 1vw; */
+    box-shadow: 10px 10px rgba(3,4,94,0.5);
+
+}
+
+.cards h3 {
+    background-color: var(--slate);
+    color: var(--lightblue);
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2vh 0;
+    margin-top: -0.25vh;
+    /* margin-bottom: 1vh; */
+    
+}
+
+.cards h3 a {
+    margin-right: 1vw;
+}
+
+.cards h3 a:link {
+    color: var(--lightblue);
+}
+
+.cards h3 a:visited {
+    color: var(--lightblue);
+}
+
+.cards h3 a:hover {
+    color: goldenrod;
+}
+
+.cards p {
+    margin-bottom: 1vh;
+    margin-left: 1vw;
+    font-size: 1.2rem;
+}
+
+.cards img {
+    width: 90%;
+}
+
+.cards ul li {
+    font-size: 1.2rem;
+}
+
+
+.skills {
+    grid-area: skills;
+}
+
+.skill-cards {
+    height: auto;
+}
+
+
+.bold {
+    font-weight:bold;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-image: linear-gradient(to bottom right, var(--lightblue), var(--slate));
+    color: var(--darkblue);
+   
+}
+
+/* Contact Info */
+address {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-style: normal;
+    
+}
+
+address h3 {
+    font-size: 1rem;
+    background-color: var(--slate);
+    color: var(--lightblue);
+    text-align: center;
+    margin: 1vh 0;
+    padding: 0.5vh 0.5vw;
+}
+
+address a {
+    margin: 1vh 1vw;
+}
+
+address a:link {
+    color: var(--darkblue);
+}
+
+address a:visited {
+    color: var(--darkblue);
+}
+
+address a:hover {
+    color: var(--lightblue);
+}
+
+@media only screen and (max-width: 500px) {
+
+    main img {
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .cards {
+        width: 100%;
+    }
+}
+
+
+
